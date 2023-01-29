@@ -1,0 +1,26 @@
+{
+  "name": "cypress-cucumber-typescript-example",
+  "version": "1.0.0",
+  "description": "Cypress cucumber with typescript",
+  "scripts": {
+    "test": "npx cypress run",
+    "cypress:open": "npx cypress open",
+    "report": "node generate-report.ts"
+  },
+  "author": "Ditmir H",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "^12.4.1",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "typescript": "^4.4.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
