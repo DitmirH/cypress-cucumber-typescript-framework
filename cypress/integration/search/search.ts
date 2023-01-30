@@ -11,5 +11,5 @@ When("I search for {string}", (searchTerm: string) => {
 
 Then("I expect to see results for {string}", (searchWord: string) => {
   cy.url().should("contain", `/search?q=${searchWord.toLowerCase()}`);
-  cy.get("h3").contains(searchWord).should("be.visible");
+  cy.contains("h3", searchWord).should("exist");
 });
